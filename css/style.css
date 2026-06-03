@@ -330,3 +330,13 @@ body {
 .lightbox .right{
     right:30px;
 }
+.location {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFD700; /* צבע זהב שמתאים לעיצוב שלך */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center; /* בכדי שיהיה במרכז */
+}
