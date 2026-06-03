@@ -81,19 +81,10 @@ section {
         font-size: 32px;
     }
 }
-.menu-toggle{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
-    color:white;
-}
-
 /* מובייל */
 @media(max-width:768px){
 
-    .menu-toggle{
-        display:block;
-    }
+
 
     .nav-links{
         display:none;
