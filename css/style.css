@@ -224,10 +224,13 @@ body {
 }
 
 .logo-img{
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    border-radius: 10px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
 
 .logo-text{
