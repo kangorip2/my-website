@@ -78,3 +78,6 @@ section {
 #contact {
     scroll-margin-top: 120px;
 }
+html, body {
+    scroll-behavior: smooth;
+}
