@@ -71,3 +71,11 @@ section {
         font-size: 32px;
     }
 }
+.hero {
+    padding-top: 140px;
+}
+
+.btn {
+    position: relative;
+    z-index: 10;
+}
