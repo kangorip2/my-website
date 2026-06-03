@@ -1,0 +1,67 @@
+/* ===== MOBILE FIX + CLEAN DESIGN ===== */
+
+body {
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* תמיכה במובייל */
+@media (max-width: 768px) {
+
+.container {
+    width: 92%;
+}
+
+/* HERO */
+.hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.hero-text p {
+    font-size: 16px;
+}
+
+/* כפתורים */
+.btns {
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* גרידים */
+.stats-grid,
+.cards,
+.testimonials,
+.timeline {
+    grid-template-columns: 1fr !important;
+}
+
+/* ניווט */
+.nav-inner {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav a {
+    display: block;
+    margin: 5px 0;
+}
+
+/* תמונה */
+.car-card {
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 30px;
+}
+
+.cta h2 {
+    font-size: 32px;
+}
+
+}
