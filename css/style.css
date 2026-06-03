@@ -330,13 +330,27 @@ body {
 .lightbox .right{
     right:30px;
 }
-.location {
-    margin-top: 15px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #FFD700; /* צבע זהב שמתאים לעיצוב שלך */
-    display: flex;
+.location-btn {
+    margin-top: 20px;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    justify-content: center; /* בכדי שיהיה במרכז */
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 215, 0, 0.15); /* רקע מוזהב שקוף */
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFD700;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
+    cursor: default; /* לא קליק אבל מראה שניתן ללחוץ */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.location-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.35);
+}
+
+.location-icon {
+    font-size: 22px;
 }
