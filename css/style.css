@@ -79,3 +79,32 @@ section {
     position: relative;
     z-index: 10;
 }
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+
+    background: #25D366;
+    color: white;
+
+    padding: 14px 18px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 700;
+    font-family: 'Heebo', sans-serif;
+    text-decoration: none;
+
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
