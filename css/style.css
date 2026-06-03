@@ -108,3 +108,36 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
 }
+.video-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.video-card{
+background:rgba(255,255,255,0.06);
+padding:15px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.35);
+text-align:center;
+transition:0.3s;
+max-width:420px;
+}
+
+.video-card:hover{
+transform:translateY(-8px);
+}
+
+.video-card iframe{
+border-radius:15px;
+border:none;
+}
+
+.video-card p{
+margin-top:12px;
+color:#fff;
+font-weight:500;
+font-size:16px;
+}
