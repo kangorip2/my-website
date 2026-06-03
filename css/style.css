@@ -186,3 +186,15 @@ body {
 .gallery-grid img:hover {
     transform: scale(1.05);
 }
+.big-btn{
+    font-size: 22px;
+    padding: 20px 45px;
+    border-radius: 50px;
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.25);
+    transition: 0.3s;
+}
+
+.big-btn:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.35);
+}
