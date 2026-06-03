@@ -399,18 +399,20 @@ display:none;
 <body>
 
 <nav class="nav">
-<div class="container nav-inner">
+  <div class="container nav-inner">
 
-<div class="logo">דור צרימי 🚗</div>
+    <div class="logo">דור צרימי 🚗</div>
 
-<div class="nav-links">
-<a href="#why">למה לבחור בי</a>
-<a href="#process">תהליך</a>
-<a href="#reviews">המלצות</a>
-<a href="#contact">יצירת קשר</a>
-</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#why" onclick="closeMenu()">למה לבחור בי</a>
+      <a href="#process" onclick="closeMenu()">תהליך</a>
+      <a href="#reviews" onclick="closeMenu()">המלצות</a>
+      <a href="#contact" onclick="closeMenu()">יצירת קשר</a>
+    </div>
+
+  </div>
 </nav>
 
 <section class="hero">
