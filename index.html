@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דור צרימי - מורה נהיגה מקצועי</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#FFD700;
+--gold2:#ffb700;
+--dark:#050816;
+--dark2:#0d1225;
+--glass:rgba(255,255,255,.08);
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Heebo',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+radial-gradient(circle at top right,#16203f 0%,#050816 45%),
+#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(90deg,transparent 49%,rgba(255,255,255,.02) 50%,transparent 51%);
+background-size:40px 40px;
+pointer-events:none;
+z-index:-1;
+}
+
+.container{
+width:min(1200px,92%);
+margin:auto;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:800px;
+height:800px;
+background:radial-gradient(circle,var(--gold),transparent 70%);
+opacity:.08;
+top:-300px;
+right:-250px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#00c3ff,transparent 70%);
+opacity:.05;
+bottom:-300px;
+left:-200px;
+}
+
+.nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:999;
+backdrop-filter:blur(20px);
+background:rgba(0,0,0,.25);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+color:var(--gold);
+}
+
+.nav a{
+text-decoration:none;
+color:white;
+margin-right:25px;
+font-weight:500;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:72px;
+line-height:1;
+font-weight:900;
+margin-bottom:25px;
+}
+
+.hero-text h1 span{
+color:var(--gold);
+}
+
+.hero-text p{
+font-size:22px;
+color:#cfd8ff;
+margin-bottom:35px;
+line-height:1.8;
+}
+
+.btns{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 34px;
+border-radius:60px;
+font-size:18px;
+font-weight:800;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+color:black;
+box-shadow:0 10px 35px rgba(255,215,0,.35);
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.05);
+color:white;
+backdrop-filter:blur(20px);
+}
+
+.car-card{
+background:var(--glass);
+border:1px solid rgba(255,255,255,.08);
+border-radius:35px;
+padding:30px;
+backdrop-filter:blur(30px);
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.car-card img{
+width:100%;
+filter:drop-shadow(0 30px 50px rgba(0,0,0,.5));
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+/* STATS */
+
+.stats{
+padding:80px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.stat{
+background:var(--glass);
+padding:35px;
+border-radius:25px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.stat h2{
+font-size:48px;
+color:var(--gold);
+}
+
+.stat p{
+color:#d6ddff;
+}
+
+/* FEATURES */
+
+.section{
+padding:110px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:52px;
+font-weight:900;
+margin-bottom:70px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.card{
+background:var(--glass);
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.icon{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+color:#c8d0f3;
+line-height:1.8;
+}
+
+/* PROCESS */
+
+.timeline{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+}
+
+.step{
+background:var(--glass);
+padding:25px;
+text-align:center;
+border-radius:25px;
+}
+
+.step span{
+font-size:40px;
+display:block;
+margin-bottom:15px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.review{
+background:var(--glass);
+padding:30px;
+border-radius:25px;
+}
+
+.review p{
+line-height:1.9;
+color:#d6ddff;
+margin-bottom:15px;
+}
+
+.review h4{
+color:var(--gold);
+}
+
+/* CTA */
+
+.cta{
+padding:120px 20px;
+text-align:center;
+background:
+linear-gradient(135deg,#ffd70020,#ffffff05);
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:22px;
+margin-bottom:35px;
+color:#d5dcff;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px 0;
+text-align:center;
+}
+
+footer p{
+color:#9aa5d6;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+left:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 15px 40px rgba(37,211,102,.4);
+z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.hero-content,
+.cards,
+.testimonials,
+.stats-grid,
+.timeline{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+.cta h2{
+font-size:40px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="container nav-inner">
+
+<div class="logo">דור צרימי 🚗</div>
+
+<div class="nav-links">
+<a href="#why">למה לבחור בי</a>
+<a href="#process">תהליך</a>
+<a href="#reviews">המלצות</a>
+<a href="#contact">יצירת קשר</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h1>
+מוציאים <span>רישיון</span><br>
+בביטחון מלא
+</h1>
+
+<p>
+שיעורי נהיגה מקצועיים עם יחס אישי, רכב חדש,
+הכנה מלאה לטסט וליווי אישי עד קבלת הרישיון.
+</p>
+
+<div class="btns">
+<a href="#contact" class="btn btn-primary">
+קבע שיעור ניסיון
+</a>
+
+<a href="tel:0500000000" class="btn btn-secondary">
+📞 התקשר עכשיו
+</a>
+</div>
+
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200" alt="">
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2>500+</h2>
+<p>תלמידים מרוצים</p>
+</div>
+
+<div class="stat">
+<h2>95%</h2>
+<p>מעבר בטסט</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>שנות ניסיון</p>
+</div>
+
+<div class="stat">
+<h2>5★</h2>
+<p>דירוג ממוצע</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="why">
+
+<div class="container">
+
+<h2 class="section-title">
+למה לבחור בי?
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>הכנה לטסט</h3>
+<p>
+למידה מדויקת לפי מסלולי הבחינה
+והדגשים של הבוחנים.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚘</div>
+<h3>רכב מתקדם</h3>
+<p>
+רכב חדיש, בטיחותי ונוח במיוחד
+ללימוד נהיגה.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>יחס אישי</h3>
+<p>
+כל תלמיד מקבל תוכנית מותאמת
+לקצב ההתקדמות שלו.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="process">
+
+<div class="container">
+
+<h2 class="section-title">
+איך זה עובד?
+</h2>
+
+<div class="timeline">
+
+<div class="step">
+<span>1️⃣</span>
+פגישת היכרות
+</div>
+
+<div class="step">
+<span>2️⃣</span>
+בניית תוכנית
+</div>
+
+<div class="step">
+<span>3️⃣</span>
+תרגול מלא
+</div>
+
+<div class="step">
+<span>4️⃣</span>
+הכנה לטסט
+</div>
+
+<div class="step">
+<span>5️⃣</span>
+רישיון ביד 🎉
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="reviews">
+
+<div class="container">
+
+<h2 class="section-title">
+מה התלמידים אומרים?
+</h2>
+
+<div class="testimonials">
+
+<div class="review">
+<p>
+עברתי טסט ראשון בזכות הסבלנות,
+המקצועיות וההסברים המצוינים.
+</p>
+<h4>★★★★★</h4>
+</div>
+
+<div class="review">
+<p>
+כל שיעור היה מסודר וברור,
+הרגשתי בטוח מהרגע הראשון.
+</p>
+<h4>★★★★★</h4>
+</div>
+
+<div class="review">
+<p>
+מהמם.
+</p>
+<h4>★★★★★</h4>
+</div>
+    
+<div class="review">
+<p>
+ממליץ לכל מי שרוצה לעבור
+טסט במהירות ובביטחון.
+</p>
+<h4>★★★★★</h4>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta" id="contact">
+
+<h2>
+מוכנים להתחיל?
+</h2>
+
+<p>
+השאירו פרטים או התקשרו עכשיו
+ותתחילו את הדרך לרישיון.
+</p>
+
+<a href="tel:0500000000" class="btn btn-primary">
+📞 050-000-0000
+</a>
+
+</section>
+
+<footer>
+
+<p>
+© כל הזכויות שמורות | מורה נהיגה מקצועי
+</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/972500000000"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
