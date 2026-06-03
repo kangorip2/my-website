@@ -1,8 +1,7 @@
 let images = [];
 let currentIndex = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-
+function initGallery(){
     const imgElements = document.querySelectorAll(".gallery-img");
 
     imgElements.forEach((img, index) => {
@@ -12,23 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
             openLightbox(index);
         });
     });
+}
 
-});
-
-// פתיחת תמונה
 function openLightbox(index){
     currentIndex = index;
     document.getElementById("lightbox-img").src = images[index];
     document.getElementById("lightbox").style.display = "flex";
 }
 
-// סגירה
 function closeLightbox(){
     document.getElementById("lightbox").style.display = "none";
 }
 
-// מעבר בין תמונות
-function changeImage(direction){
+// 🔥 חשוב: חייב להיות גלובלי
+window.changeImage = function(direction){
     currentIndex += direction;
 
     if(currentIndex < 0){
@@ -41,3 +37,5 @@ function changeImage(direction){
 
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
+
+document.addEventListener("DOMContentLoaded", initGallery);
