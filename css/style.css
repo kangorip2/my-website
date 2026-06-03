@@ -240,3 +240,48 @@ body {
     font-weight: 900;
     color: var(--gold);
 }
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:20px;
+}
+
+.lightbox .close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+.lightbox .nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+}
+
+.lightbox .left{ left:20px; }
+.lightbox .right{ right:20px; }
+
+.gallery-grid img{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
