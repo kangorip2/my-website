@@ -18,9 +18,9 @@
 
 <div class="gallery-grid">
 
-<img src="images/dorr.jpg" style="width:100%;border-radius:20px;">
-<img src="images/dorr.jpg" style="width:100%;border-radius:20px;">
-<img src="images/dorr.jpg" style="width:100%;border-radius:20px;">
+<img src="images/dorr.jpg" class="gallery-img">
+<img src="images/dorr.jpg" class="gallery-img">
+<img src="images/dorr.jpg" class="gallery-img">
 
 </div>
 
@@ -45,6 +45,15 @@ allowfullscreen>
 </a>
 
 </div>
+<div id="lightbox" class="lightbox">
 
+    <span class="close" onclick="closeLightbox()">✖</span>
+
+    <span class="nav left" onclick="changeImage(-1)">❮</span>
+    <span class="nav right" onclick="changeImage(1)">❯</span>
+
+    <img id="lightbox-img">
+
+</div>
 </body>
 </html>
