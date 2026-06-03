@@ -1,8 +1,9 @@
 console.log("script loaded");
+
 let images = [];
 let currentIndex = 0;
 
-function initGallery(){
+function initGallery() {
     const imgElements = document.querySelectorAll(".gallery-img");
 
     imgElements.forEach((img, index) => {
@@ -14,29 +15,29 @@ function initGallery(){
     });
 }
 
-function openLightbox(index){
+function openLightbox(index) {
     currentIndex = index;
     document.getElementById("lightbox-img").src = images[index];
     document.getElementById("lightbox").style.display = "flex";
 }
 
-function closeLightbox(){
+function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-// 🔥 חשוב: חייב להיות גלובלי
-window.changeImage = function(direction){
+// חובה שיהיה גלובלי
+window.changeImage = function(direction) {
     currentIndex += direction;
 
-    if(currentIndex < 0){
+    if (currentIndex < 0) {
         currentIndex = images.length - 1;
     }
 
-    if(currentIndex >= images.length){
+    if (currentIndex >= images.length) {
         currentIndex = 0;
     }
 
     document.getElementById("lightbox-img").src = images[currentIndex];
-}
+};
 
 document.addEventListener("DOMContentLoaded", initGallery);
