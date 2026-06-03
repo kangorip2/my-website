@@ -1,3 +1,4 @@
+console.log("script loaded");
 let images = [];
 let currentIndex = 0;
 
